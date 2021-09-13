@@ -398,6 +398,9 @@ section {
 
 /* (375px and down) */
 @media only screen and (max-width: 375px) {
+  #backBtn {
+    font-size: 30px;
+  }
   .temp {
     margin-right: 10px;
   }
@@ -422,7 +425,7 @@ section {
     width: 100% !important;
   }
   .card, .five-day-card {
-    width: 80% !important;
+    width: 90% !important;
     height: 350px !important;
     margin-bottom: 45px !important;
   }
