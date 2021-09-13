@@ -413,7 +413,7 @@ section {
   }
   #form {
     justify-content: center;
-    width: 90vw;
+    width: 100vw;
   }
   input {
     width: 100% !important;
