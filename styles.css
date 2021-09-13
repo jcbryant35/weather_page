@@ -432,6 +432,9 @@ section {
   .five-day-card {
     height: 375px !important;
   }
+  .f-c {
+    margin-left: 15px;
+  }
 }
 
 @media only screen and (width: 768px) {
