@@ -49,6 +49,9 @@ main {
   background-image: url("background3.png");
   border-radius: 25px;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 /* HEADING & FORM STYLES 
