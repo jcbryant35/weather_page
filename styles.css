@@ -410,6 +410,7 @@ section {
 @media only screen and (width: 480px) {
   #form {
     margin-left: 25px;
+    border: 1px solid red;
   }
 }
 
