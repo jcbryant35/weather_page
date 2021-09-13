@@ -133,7 +133,7 @@ function displayCurrentWeather(d) {
 function getFiveDayForecast() {
 
     /*Fetch the data*/
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=` + apiKey)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=` + apiKey)
     .then(response => {return response.json()})
     .then(data => {
         console.log(data);               
