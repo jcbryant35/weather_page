@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Weather App</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://kit.fontawesome.com/7cf3b9a7d2.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="wrapper">
+                <header>
+                    <h1 id="title">Current Weather</h1>
+                    <form id="form">
+                        <input id="input" type="text" placeholder="Search for a city" autofocus>
+                        <button id="btn" type="submit">SUBMIT</button>  
+                        <button id="gpsBtn" type="button"><i class="fas fa-location-arrow"></i> CURRENT LOCATION</button>
+                        <span class="msg"></span>  
+                    </form>
+                    <button id="backBtn" type="button">&#8678;</button>
+                </header>
+                <section class="ajax-section">
+                    <div class="cardWrapper">
+                        <!-- Single city card (current weather) -->
+                        <div class="card" id="currentCard">
+                           <div class="cardHeading">
+                                <p class="city-name"></p>
+                                <span class="country"></span> 
+                                <button class="fiveDayBtn" type="submit">5-day Forecast</button>
+                                <button id="fiveDayBtn2" type="submit">5-day Forecast</button>   
+                                <button id="fiveDayBtnGPS" type="submit"><i class="fas fa-location-arrow"></i> 5-day Forecast</button> 
+                                <button id="fiveDayBtnGPS2" type="submit"><i class="fas fa-location-arrow"></i> 5-day Forecast</button>             
+                            </div>
+                            <div class="cardTemp">
+                                <h1 class="temp"></h1>
+                                <p class="f-c fah"></p> 
+                                <p class="f-c" id="fah2"></p>
+                                <p class="f-c cel">&deg;C</p> 
+                                <p class="f-c" id="cel2">&deg;C</p> 
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon"></div>
+                                <span class="desc"></span> 
+                            </div> 
+                        </div>
+
+                        <!-- 5 day forecast cards (forecast) -->
+                        <div class="five-day-card">
+                            <div class="day">
+                                <p class="dayOne"></p>
+                            </div>
+                            <div class="cardHeading">
+                                <p class="city-name city-name-five"></p>
+                                <span class="country country-five"></span> 
+                             </div>
+                             <div class="cardTemp">
+                                <h1 class="temp temp-five-one"></h1>
+                                <p class="f-c f-c-five-one"></p>    
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon icon-five-one"></div>
+                                <span class="desc desc-five-one"></span> 
+                            </div> 
+                        </div>
+                        <div class="five-day-card">
+                            <div class="day">
+                                <p class="dayTwo"></p>
+                            </div>
+                            <div class="cardHeading">
+                                <p class="city-name city-name-five"></p>
+                                <span class="country country-five"></span> 
+                             </div>
+                             <div class="cardTemp">
+                                <h1 class="temp temp-five-two"></h1>
+                                <p class="f-c f-c-five-two"></p>    
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon icon-five-two"></div>
+                                <span class="desc desc-five-two"></span> 
+                            </div> 
+                        </div>
+                        <div class="five-day-card">
+                            <div class="day">
+                                <p class="dayThree"></p>
+                            </div>
+                            <div class="cardHeading">
+                                <p class="city-name city-name-five"></p>
+                                <span class="country country-five"></span> 
+                             </div>
+                             <div class="cardTemp">
+                                <h1 class="temp temp-five-three"></h1>
+                                <p class="f-c f-c-five-three"></p>    
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon icon-five-three"></div>
+                                <span class="desc desc-five-three"></span> 
+                            </div> 
+                        </div>
+                        <div class="five-day-card">
+                            <div class="day">
+                                <p class="dayFour"></p>
+                            </div>
+                            <div class="cardHeading">
+                                <p class="city-name city-name-five"></p>
+                                <span class="country country-five"></span> 
+                             </div>
+                             <div class="cardTemp">
+                                <h1 class="temp temp-five-four"></h1>
+                                <p class="f-c f-c-five-four"></p>    
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon icon-five-four"></div>
+                                <span class="desc desc-five-four"></span> 
+                            </div> 
+                        </div>
+                        <div class="five-day-card">
+                            <div class="day">
+                                <p class="dayFive"></p>
+                            </div>
+                            <div class="cardHeading">
+                                <p class="city-name city-name-five"></p>
+                                <span class="country country-five"></span> 
+                             </div>
+                             <div class="cardTemp">
+                                <h1 class="temp temp-five-five"></h1>
+                                <p class="f-c f-c-five-five"></p>    
+                            </div>
+                            <div class="cardIcon">
+                                <div class="icon icon-five-five"></div>
+                                <span class="desc desc-five-five"></span> 
+                            </div> 
+                        </div>
+                    </div>             
+                </section>
+            </div>
+        </main>       
+        <script src="index.js"></script>
+    </body>
+</html>
