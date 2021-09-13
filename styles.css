@@ -411,10 +411,6 @@ section {
   #wrapper {
     height: auto !important;
   }
-  header {
-    display: flex;
-    justify-content: center !important;
-  }
   #form {
     justify-content: center;
     width: 90vw;
