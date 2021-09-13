@@ -1,0 +1,525 @@
+/* VARIABLES
+-----------------------------------------------*/
+/* RESET
+----------------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* MAIN STYLES 
+------------------------------------------------ */
+main {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper {
+  height: 95vh;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("background3.png");
+  border-radius: 25px;
+  background-attachment: fixed;
+}
+
+/* HEADING & FORM STYLES 
+------------------------------------------------ */
+header h1 {
+  font-size: 10vh;
+  color: white;
+  margin-top: 35px;
+}
+
+header #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header input {
+  margin-top: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid grey;
+  font-size: 20px;
+  color: white;
+}
+
+header input::-webkit-input-placeholder {
+  color: #f8f7f7;
+  font-size: 22px;
+}
+
+header input:-ms-input-placeholder {
+  color: #f8f7f7;
+  font-size: 22px;
+}
+
+header input::-ms-input-placeholder {
+  color: #f8f7f7;
+  font-size: 22px;
+}
+
+header input::placeholder {
+  color: #f8f7f7;
+  font-size: 22px;
+}
+
+header button {
+  font-size: 12px;
+  padding: 5px 8px 3.5px 8px;
+  border-radius: 3px;
+  border: none;
+  letter-spacing: 1px;
+  background-color: #f83838;
+  color: white;
+  cursor: pointer;
+  height: 30px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+
+header button:hover {
+  opacity: 0.9;
+}
+
+header button:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+header .msg {
+  color: red;
+  font-size: 2vw;
+  background-color: white;
+  padding: 5px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  top: 23%;
+  left: 29.75%;
+}
+
+header #backBtn {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 7%;
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+/* AJAX SECTION 
+---------------------------------------------- */
+section {
+  margin-top: 40px;
+  height: 60vh;
+  width: 95%;
+}
+
+.cardWrapper {
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardWrapper #currentCard {
+  -webkit-animation-name: current_card;
+          animation-name: current_card;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+.cardWrapper .card, .cardWrapper .five-day-card {
+  margin-left: 1500px;
+  -webkit-animation-name: card_animation;
+          animation-name: card_animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  border-radius: 25px;
+  background-color: white;
+  width: 25%;
+  height: 98%;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 10px grey;
+          box-shadow: 0px 10px grey;
+  display: none;
+}
+
+.cardWrapper .card .day, .cardWrapper .five-day-card .day {
+  width: 80%;
+  margin-left: 15px;
+  margin-top: 5px;
+  position: relative;
+  top: 10px;
+}
+
+.cardWrapper .card .day p, .cardWrapper .five-day-card .day p {
+  color: grey;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.cardWrapper .card .cardHeading, .cardWrapper .five-day-card .cardHeading {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cardWrapper .card .cardHeading .fiveDayBtn, .cardWrapper .five-day-card .cardHeading .fiveDayBtn {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  right: 3px;
+  background-color: #74b8fc;
+  border: none;
+  border-radius: 25px;
+  padding: 2px 7px 2px 7px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.cardWrapper .card .cardHeading #fiveDayBtnGPS, .cardWrapper .five-day-card .cardHeading #fiveDayBtnGPS {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  right: 3px;
+  background-color: #74b8fc;
+  border: none;
+  border-radius: 25px;
+  padding: 2px 7px 2px 7px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.cardWrapper .card .cardHeading #fiveDayBtn2, .cardWrapper .five-day-card .cardHeading #fiveDayBtn2 {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  right: 3px;
+  background-color: #74b8fc;
+  border: none;
+  border-radius: 25px;
+  padding: 2px 7px 2px 7px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.cardWrapper .card .cardHeading #fiveDayBtnGPS2, .cardWrapper .five-day-card .cardHeading #fiveDayBtnGPS2 {
+  height: 20px;
+  position: relative;
+  top: 10px;
+  right: 3px;
+  background-color: #74b8fc;
+  border: none;
+  border-radius: 25px;
+  padding: 2px 7px 2px 7px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.cardWrapper .card .cardHeading .city-name, .cardWrapper .five-day-card .cardHeading .city-name {
+  padding: 22px 0px 25px 25px;
+  padding-top: 35px;
+  font-size: 22px;
+  margin-top: 5px;
+  color: #6b6b6b;
+}
+
+.cardWrapper .card .cardHeading .country, .cardWrapper .five-day-card .cardHeading .country {
+  background-color: orange;
+  border-radius: 5px;
+  padding: 4px 2px 2px 3.5px;
+  margin-left: 5px;
+  font-size: 15px;
+  color: white;
+  width: 27px;
+  height: 23px;
+  position: relative;
+  top: 35px;
+  left: 0px;
+  letter-spacing: 1px;
+}
+
+.cardWrapper .card .cardTemp, .cardWrapper .five-day-card .cardTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 5vh;
+}
+
+.cardWrapper .card .cardTemp .temp, .cardWrapper .five-day-card .cardTemp .temp {
+  padding: 15px 0px 0px 15px;
+  font-size: 9vh;
+  width: 25%;
+}
+
+.cardWrapper .card .cardTemp .temp-five-one, .cardWrapper .card .cardTemp .temp-five-two, .cardWrapper .card .cardTemp .temp-five-three, .cardWrapper .card .cardTemp .temp-five-four, .cardWrapper .card .cardTemp .temp-five-five, .cardWrapper .five-day-card .cardTemp .temp-five-one, .cardWrapper .five-day-card .cardTemp .temp-five-two, .cardWrapper .five-day-card .cardTemp .temp-five-three, .cardWrapper .five-day-card .cardTemp .temp-five-four, .cardWrapper .five-day-card .cardTemp .temp-five-five {
+  font-size: 2vw;
+  width: 100%;
+}
+
+.cardWrapper .card .cardTemp .f-c, .cardWrapper .five-day-card .cardTemp .f-c {
+  margin-top: 20px;
+  font-size: smaller;
+  height: 100%;
+}
+
+.cardWrapper .card .cardTemp .f-c:hover, .cardWrapper .five-day-card .cardTemp .f-c:hover {
+  cursor: pointer;
+}
+
+.cardWrapper .card .cardTemp .cel, .cardWrapper .five-day-card .cardTemp .cel {
+  color: lightgrey;
+}
+
+.cardWrapper .card .cardTemp #cel2, .cardWrapper .five-day-card .cardTemp #cel2 {
+  display: none;
+  color: lightgrey;
+}
+
+.cardWrapper .card .cardTemp #fah2, .cardWrapper .five-day-card .cardTemp #fah2 {
+  display: none;
+}
+
+.cardWrapper .card .cardIcon, .cardWrapper .five-day-card .cardIcon {
+  height: 25%;
+}
+
+.cardWrapper .card .cardIcon .desc, .cardWrapper .five-day-card .cardIcon .desc {
+  padding: 15px;
+  color: #6b6b6b;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.cardWrapper .five-day-card {
+  min-width: 200px;
+}
+
+/******5-Day Forecast**********/
+@-webkit-keyframes card_animation {
+  from {
+    margin-left: 1500px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+@keyframes card_animation {
+  from {
+    margin-left: 1500px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+/******Current Weather**********/
+@-webkit-keyframes current_card {
+  from {
+    margin-top: 1500px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+@keyframes current_card {
+  from {
+    margin-top: 1500px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+/* (375px and down) */
+@media only screen and (max-width: 375px) {
+  .temp {
+    margin-right: 10px;
+  }
+}
+
+/*(600px and down) */
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    height: auto !important;
+  }
+  #form {
+    justify-content: center;
+    width: 90vw;
+  }
+  input {
+    width: 100% !important;
+  }
+  #btn {
+    width: 100% !important;
+  }
+  #gpsBtn {
+    width: 100% !important;
+  }
+  .card, .five-day-card {
+    width: 80% !important;
+    height: 350px !important;
+    margin-bottom: 45px !important;
+  }
+  .five-day-card {
+    height: 375px !important;
+  }
+}
+
+@media only screen and (width: 768px) {
+  .card, .five-day-card {
+    width: 60% !important;
+    height: 550px !important;
+    margin-bottom: 75px !important;
+  }
+  .day {
+    font-size: 3vw !important;
+  }
+  .city-name, .city-name-five {
+    font-size: 4vw !important;
+  }
+  .desc, .desc-five-one, .desc-five-two, .desc-five-three, .desc-five-four, .desc-five-five {
+    font-size: 3vw !important;
+  }
+}
+
+/*(1024px and down) */
+@media only screen and (max-width: 1024px) {
+  #wrapper {
+    width: 100vw;
+    height: 100vh !important;
+    border-radius: 0px;
+  }
+  header h1 {
+    font-size: 12vw;
+    text-align: center;
+  }
+  #form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    margin: 5px;
+  }
+  #form button {
+    margin: 0px;
+  }
+  #form #btn {
+    margin: 7px 0px 3px 0px;
+  }
+  .cardWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+  }
+  .five-day-card .day {
+    font-size: 5vw;
+  }
+  .five-day-card .temp-five-one, .five-day-card .temp-five-two, .five-day-card .temp-five-three, .five-day-card .temp-five-four, .five-day-card .temp-five-five {
+    font-size: 10vw !important;
+  }
+  body {
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+  html {
+    background-image: url("background3.png");
+    background-attachment: fixed;
+  }
+  #backBtn {
+    position: absolute;
+    top: 0px !important;
+    left: 5px !important;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (width: 1024px) {
+  .card, .five-day-card {
+    width: 60% !important;
+    height: 550px !important;
+    margin-bottom: 75px !important;
+  }
+  .city-name, .city-name-five, .desc, .day {
+    font-size: 3vw !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
