@@ -413,7 +413,7 @@ section {
   }
   #form {
     justify-content: center;
-    width: 90vw;
+    width: 100%; /*90vw;*/
     border: 2px solid red !important;
   }
   input {
