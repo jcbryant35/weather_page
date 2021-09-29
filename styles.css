@@ -411,9 +411,16 @@ section {
   #wrapper {
     height: auto !important;
   }
+  #formWrapper {
+    width: 100%;
+    border: 6px solid green;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
   #form {
     justify-content: center;
-    width: 100vw; /*90vw;*/
+    width: 90vw;
     border: 2px solid red !important;
   }
   input {
